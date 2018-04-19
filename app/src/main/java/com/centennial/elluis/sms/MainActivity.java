@@ -1,6 +1,7 @@
 package com.centennial.elluis.sms;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -53,4 +54,13 @@ public class MainActivity extends AppCompatActivity {
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNumber, null, message, null, null);
     }
+
+    //Send SMS through built-in app
+    /*Intent i = new
+            Intent(android.content.Intent.ACTION_VIEW);
+i.putExtra("address", "5556; 5558; 5560");
+i.putExtra("sms_body", "Hello my friends!");
+i.setType("vnd.android-dir/mms-sms");
+    startActivity(i);*/
+
 }
